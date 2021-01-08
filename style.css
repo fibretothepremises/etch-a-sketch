@@ -1,0 +1,30 @@
+*,
+*::after,
+*::before {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+/* SKETCH GRID */
+/* be careful with borders and margins */
+.sketch-grid {
+    display: grid;
+    grid-gap:1px;
+    border: 1px solid rgb(198,164,154);
+    width: 900px;
+    height: 900px;
+}
+
+.fill {
+    background: black;
+}
+
+.btn {
+    width: 50px;
+    height: 50px;
+}
+
+.clear {
+    
+}
