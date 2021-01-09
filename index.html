@@ -13,16 +13,41 @@
 	<meta property="og:site_name" content="Your Site Name">
 	<meta name="twitter:card" content="summary_large_image">
 	<meta name="twitter:image:alt" content="image description">
+	<link href="reset.css" rel="stylesheet">
 	<link href="style.css" rel="stylesheet">
 	<link rel="icon" type="image/svg+xml" href="/favicon.svg">
 </head>
 <body>
-    <h1>Your content here!</h1>
-    <div class="buttons">
-        <button class="btn clear">Clear</button>
-        <button class="btn size">Grid Size</button>
+	<h1>Draw</h1>
+	<h3>me like one of your french girls</h3>
+	<div class="sketch-grid"></div>
+	<div class="btns">
+        <div class="col"><button class="clear">clear grid</button></div>
+		<div class="col">
+			<form class="grid-form">
+				<fieldset>
+					<label for="chunky"><input type="radio" id="chunky" name="grid-size" value="chunky" checked><span>chunky</span></label>
+					
+					<label for="regular"><input type="radio" id="regular" name="grid-size" value="regular"><span>regular</span></label>
+		
+					<label for="fine"><input type="radio" id="fine" name="grid-size" value="fine"><span>fine</span></label>
+				</fieldset>
+			</form>
+
+			<form class="color-form">
+				<fieldset>
+					<label for="noir"><input type="radio" id="noir" name="grid-color" value="noir" checked><span>noir</span></label>
+
+					<label for="blanc"><input type="radio" id="blanc" name="grid-color" value="blanc"><span>blanc</span></label>
+
+					
+					<label for="variation"><input type="radio" id="variation" name="grid-color" value="variation"><span>variation</span></label>
+
+		
+				</fieldset>
+			</form>
+		</div>
     </div>
-    <div class="sketch-grid"></div>
 	<script src="script.js"></script>
 </body>
 </html>

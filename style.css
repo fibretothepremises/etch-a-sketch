@@ -1,3 +1,7 @@
+:root {
+    --white: rgb(239, 239, 239);
+}
+
 *,
 *::after,
 *::before {
@@ -6,25 +10,121 @@
             box-sizing: border-box;
 }
 
+html {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 14px;
+}
+
+body {
+    background: url("/images/5084-22.jpg") center top/cover no-repeat fixed ;
+}
+
+h1 {
+    margin-top: 35px;
+    font-size: 4rem;
+    text-align: center;
+}
+
+h3 {
+    margin-top: 20px;
+    font-size: 1.4rem;
+    text-align: center;
+    font-style: italic;
+    margin-bottom: 18px;
+}
+
 /* SKETCH GRID */
 /* be careful with borders and margins */
 .sketch-grid {
+    margin: auto;
     display: grid;
     grid-gap:1px;
-    border: 1px solid rgb(198,164,154);
-    width: 900px;
-    height: 900px;
+    border-radius: 1%;
+    border: 1px solid rgb(0, 0, 0);
+    width: 680px;
+    height: 680px;
 }
 
-.fill {
+.black {
     background: black;
 }
 
-.btn {
-    width: 50px;
-    height: 50px;
+/* BUTTONS */
+
+.btns {
+    margin-top: 65px;
+    display: flex;
+    justify-content: center;
+}
+
+.col {
+    width: 50vw;
+    position: relative;
+}
+
+.grid-form {
+    position: absolute;
+    left: -200px;
+}
+
+.grid-form fieldset {
+    padding-top: 14px;
+    padding-left: 13px;
+    display: block;
+    background: var(--white);
+
+    border-width: 1px;
+    border-radius: 2px;
+    border-style: solid;
+    border-color: rgb(118, 118, 118);
+    width: 118px;
+    height: 100px;
+}
+
+.color-form {
+    position: absolute;
+    left: 80px;
+}
+
+.color-form fieldset {
+    padding-top: 14px;
+    padding-left: 13px;
+    display: block;
+    background: var(--white);
+
+    border-width: 1px;
+    border-radius: 2px;
+    border-style: solid;
+    border-color: rgb(118, 118, 118);
+    width: 118px;
+    height: 100px;
 }
 
 .clear {
-    
+    position: absolute;
+    right: -50px;
+    width: 100px;
+    height: 100px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: italic;
+    font-size: 1.5rem;
+}
+
+label {
+    display: block;
+    position: relative;
+    height: 25px;
+    line-height: 25px;
+    font-size: 1.3rem;
+}
+
+label span {
+    position: absolute;
+    left: 25px;
+}
+
+input[type="radio"] {
+    position: absolute;
+    top: 7px;
+    left: 3px;
 }
