@@ -21,8 +21,13 @@ sketchGrid.addEventListener("mouseover", fillNoir);
 // add onclick function to clear button to call clearGrid function
 clearBtn.addEventListener("click", clearGrid);
 // add onclick function to grid size buttons to call changeGridSize function
-for (i=0;i<gridBtns.length;i++) {
-    gridBtns[i].addEventListener("click", changeGridSize);
+// 1. make nodelist into array
+let gridBtnsArray = Array.from(gridBtns);
+// 2. loop over array and apply addListener
+gridBtnsArray.forEach(addListener);
+// 3. create function addListener that adds event listener to 1st parameter that calls the changeGridSize function
+function addListener(gridBtn) {
+    gridBtn.addEventListener("click", changeGridSize);
 }
 // add onclick function to grid color buttons to call changeEvent listener
 noirBtn.addEventListener("click", addNoirListener);
@@ -30,7 +35,6 @@ blancBtn.addEventListener("click", addBlancListener);
 varBtn.addEventListener("click", addVarListener);
 // add onclick function to checkbox and call toggleTemplates
 checkbox.addEventListener("click", toggleTemplates);
-
 // function to add event listener to sketchGrid - Noir
 function addNoirListener() {
     sketchGrid.removeEventListener("mouseover", fillBlanc);
