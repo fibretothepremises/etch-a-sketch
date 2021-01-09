@@ -1,5 +1,5 @@
 // Squares //
-let squares = 8;
+let squares = 14;
 let squareDivs = [];
 // Button //
 let clearBtn = document.querySelector(".clear");
@@ -91,13 +91,13 @@ function clearGrid() {
 function changeGridSize(e) {
     switch (e.target.id) {
         case "chunky":
-            squares = 8;
+            squares = 14;
             break;
         case "regular":
-            squares = 32;
+            squares = 50;
             break;
         case "fine":
-            squares = 50;
+            squares = 100;
             break;
     }
     sketchGrid.textContent = "";

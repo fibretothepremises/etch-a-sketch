@@ -45,8 +45,42 @@ h3 {
     height: 680px;
 }
 
-.black {
-    background: black;
+.grid-container {
+    position: relative;
+    width: 680px;
+    height: 680px;
+    margin: auto;
+}
+
+.nsw {
+    position: fixed;
+    top: -30px;
+    left: -13px;
+    width: 300px;
+
+    transform: rotate(-2deg);
+}
+
+.nyc {
+    position: fixed;
+    top: 0;
+    right: 0;
+    transform: rotate(180deg);
+    width: 500px;
+}
+
+.github {
+    position: fixed;
+    bottom: -25px;
+    left: -20px;
+    width: 280px;
+}
+
+.android {
+    position: fixed;
+    bottom: -68px;
+    right: -100px;
+    width: 420px;
 }
 
 /* BUTTONS */
