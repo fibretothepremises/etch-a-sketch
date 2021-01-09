@@ -10,6 +10,9 @@ let noirBtn = document.querySelector("#noir");
 let blancBtn = document.querySelector("#blanc");
 let varBtn = document.querySelector("#variation");
 let sketchGrid = document.querySelector(".sketch-grid");
+let checkbox = document.querySelector("#checkbox");
+let templates = document.querySelector(".templates");
+templates.style.display = "none";
 // Deafult Grid //
 createGrid(squares);
 // Set up a “hover” effect so that the grid divs change color when your mouse passes over them, leaving a (pixelated) trail through your grid like a pen would.
@@ -24,18 +27,32 @@ fineBtn.addEventListener("click", changeGridSize);
 noirBtn.addEventListener("click", addNoirListener);
 blancBtn.addEventListener("click", addBlancListener);
 varBtn.addEventListener("click", addVarListener);
-// function to add event listener and call colorme method;
+// add onclick function to checkbox and call toggleTemplates
+checkbox.addEventListener("click", toggleTemplates);
+// function to hide/show template images
+function toggleTemplates() {
+    switch (templates.style.display) {
+        case ("none"):
+            templates.style.display = "block";
+            break;
+        case ("block"):
+            templates.style.display = "none";
+            break;
+    }
+}
+// function to add event listener to sketchGrid - Noir
 function addNoirListener() {
     sketchGrid.removeEventListener("mouseover", fillBlanc);
     sketchGrid.removeEventListener("mouseover", fillVar);
     sketchGrid.addEventListener("mouseover", fillNoir); 
 }
-// function to add event listener and call colorme method;
+// function to add event listener to sketchGrid - Blanc
 function addBlancListener() {
     sketchGrid.removeEventListener("mouseover", fillNoir);
     sketchGrid.removeEventListener("mouseover", fillVar);
     sketchGrid.addEventListener("mouseover", fillBlanc); 
 }
+// function to add event listener to sketchGrid - Var
 function addVarListener() {
     sketchGrid.removeEventListener("mouseover", fillNoir);
     sketchGrid.removeEventListener("mouseover", fillBlanc);
@@ -61,19 +78,20 @@ function createGrid(squares) {
         }
     }
 }
-// create function that adds new class to the square divs as mouse enters
+// create function that changes background color of div as mouse enters element to BLACK
 function fillNoir(e) {
     if (e.target.parentNode == sketchGrid) {
         e.target.style.backgroundColor = "black";
     }
 }
-// create function that changes background color of div the mouse hovers over
+// create function that changes background color of div as mouse enters element to WHITE
 function fillBlanc(e) {
     // make a color palette;
     if (e.target.parentNode == sketchGrid) {
         e.target.style.backgroundColor = "white";
     }
 }
+// create function that changes background color of div as mouse enters element to RANDOM COLOR from colors array
 function fillVar(e) {
     // make a color palette;
     colors = ["#FAF3DD", "#C8D5B9", "#8FC0A9", "#68B0AB", "#4A7C59"];
@@ -87,7 +105,7 @@ function clearGrid() {
         squareDivs[i].style.backgroundColor = "transparent";
     }
 }
-// get user input for how many squares per side
+// create function to switch between grid sizes depending on which button was clicked
 function changeGridSize(e) {
     switch (e.target.id) {
         case "chunky":
@@ -104,8 +122,3 @@ function changeGridSize(e) {
     createGrid(squares);
 }
 // keep the total .sketch-grid to be the same i.e. make the size of squares smaller if number of squares increase, make the squares bigger if less number of squares per side
-// Create function to get user input and determine number of squares per side.
-
-
-// Set a limit of squares to ~100
-let squaresLimit = 200;

@@ -117,7 +117,7 @@ h3 {
 
 .color-form {
     position: absolute;
-    left: 80px;
+    left: 82px;
 }
 
 .color-form fieldset {
@@ -161,4 +161,39 @@ input[type="radio"] {
     position: absolute;
     top: 7px;
     left: 3px;
+}
+
+/* TEMPLATES */
+.template-form {
+    bottom: -35px;
+    position: absolute;
+    right: 0;
+}
+
+.template-form fieldset {
+    display: block;
+    background: rgba(255, 255, 255, 0.287);
+
+    border-width: 1px;
+    border-radius: 2px;
+    width: 100px;
+    height: 35px;
+}
+
+.switch {
+    height: 35;
+    line-height: 35px;
+    position: relative;
+}
+
+.switch input {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+
+}
+
+.switch span {
+    position: absolute;
+    left: 30px;
 }
