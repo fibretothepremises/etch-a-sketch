@@ -54,18 +54,8 @@ function addVarListener() {
     sketchGrid.addEventListener("mouseover", fillVar); 
 }
 // create function to switch between grid sizes depending on which button was clicked
-function changeGridSize(e) {
-    switch (e.target.id) {
-        case "chunky":
-            squares = 14;
-            break;
-        case "regular":
-            squares = 50;
-            break;
-        case "fine":
-            squares = 100;
-            break;
-    }
+function changeGridSize(gridBtn) {
+    squares = gridBtn.target.value;
     sketchGrid.textContent = "";
     createGrid(squares);
 }
