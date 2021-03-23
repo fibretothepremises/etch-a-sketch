@@ -1,7 +1,13 @@
-Etch-a-Sketch by @fibretothepremises
-as part of @theOdinProject
+# 🎨 Etch-a-Sketch by @fibretothepremises
 
-Assignment Details:
+this is a javascript etch-a-sketch 🎨 app I made.
+
+## Live site
+Have a play around on [the live site](https://fibretothepremises.github.io/etch-a-sketch/)
+
+---
+
+## Assignment Details:
 
 1. Follow the instructions atop Odin’s Google Homepage project to setup a git repository for this project.
 
